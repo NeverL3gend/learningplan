@@ -65,3 +65,5 @@ console.log(i + 1); //this is going to return us a value of 6
 
 const name = prompt("Enter your first name:")
 alert(`Hello, ${name}`)
+
+/* */
