@@ -83,3 +83,18 @@ Shows each array element using a for-of loop.
 //     console.log(musketeer);
 // }
 
+
+//String Methods
+
+// for(let  i= 0; i < myString.length; i++) {
+//     //use mystring[i] to each access each character one by one
+// }
+
+
+//turning a string into an array
+
+const name = 'alex';
+const nameArray = Array.from(name);
+nameArray.forEach(letter => {
+    console.log(letter);
+})
