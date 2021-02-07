@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    margin: 2px;
+    height: 279px;
+    width: 189px;
+    border: 2px black solid;
+}
+
+#row {
+    margin: 2px;
+    height: 40px;
+    width: 180px;
+    border: 2px black solid;
+}
+
+input {
+    height: 33px;
+    margin: 2px;
+    width: 176px;
+    border: 2px black solid;
+}
+
+section button {
+    float: left;
+    margin: 7px;
+}
