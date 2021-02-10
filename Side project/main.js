@@ -10,3 +10,4 @@
 let btnChange = document.querySelector('#change')
 
 btnChange.addEventListener('click', () => box.style.backgroundColor = 'red')
+
