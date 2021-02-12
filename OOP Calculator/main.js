@@ -7,35 +7,40 @@
  equal button I want to see the results, shown
 */
 
-let opBtn = document.querySelector('#op')
-let numBtn = document.querySelector('#num')
-let equalBtn = document.querySelector('#equal')
-let clrBtn = document.querySelector('#clear') //clear button
-let input = document.querySelector('#input')
-
-
 const calculator = {
-    add(x,y) {
-        let solution = x + y
-        return solution
+    button: document.querySelectorAll('#button'),
+    equalBtn: document.querySelector('#equal'),
+    clrBtn:  document.querySelector('#clear'), 
+    show:  document.querySelector('#input'),
+
+    click () {
+        this.button.forEach(button  => {
+            button.addEventListener('click', () => {
+                let number = button.getAttribute('data-num')
+                this.show.textContent = number
+            })
+        });
     },
 
-    sub(x,y) {
-        let solution = x - y
-        return solution
-    },
+    // evaluation () {
+    //     this.equalBtn.addEventListener('click', () => {
+    //         let solution  = this.show.textContent;
+    //         this.show.textContent = eval(solution)
+    //     })
+    // },
 
-    mul(x,y) {
-        let solution = x * y
-        return solution
-    },
+    // clear () {
+    //     this.clrBtn.addEventListener('click', () =>{
+    //         show.textContent = ' '
+    //     })
+    // }
 
-    div(x,y) {
-        let solution = x / y
-        return solution
-    }
 }
 
+calculator.click()
+calculator.evaluation()
+calculator.clear()
+  
 
 
 
