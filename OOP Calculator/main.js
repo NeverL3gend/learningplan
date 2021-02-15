@@ -40,6 +40,10 @@ const calculator = {
 calculator.click()
 calculator.evaluation()
 calculator.clear()
+
+
+
+//test
   
 
 
