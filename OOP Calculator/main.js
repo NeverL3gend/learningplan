@@ -10,38 +10,35 @@
 const calculator = {
     button: document.querySelectorAll('#button'),
     equalBtn: document.querySelector('#equal'),
-    clrBtn:  document.querySelector('#clear'), 
+    clrBtn: document.querySelector('#clear'), 
     show:  document.querySelector('#input'),
 
     click () {
         this.button.forEach(button  => {
             button.addEventListener('click', () => {
                 let number = button.getAttribute('data-num')
-                this.show.textContent = number
+                this.show.textContent += number
             })
         });
     },
 
-    // evaluation () {
-    //     this.equalBtn.addEventListener('click', () => {
-    //         let solution  = this.show.textContent;
-    //         this.show.textContent = eval(solution)
-    //     })
-    // },
+    evaluation () {
+        this.equalBtn.addEventListener('click', () => {
+            let solution  = this.show.textContent;
+            this.show.textContent = eval(solution)
+        })
+    },
 
-    // clear () {
-    //     this.clrBtn.addEventListener('click', () =>{
-    //         show.textContent = ' '
-    //     })
-    // }
-
+    clear () {
+        this.clrBtn.addEventListener('click', () =>{
+        this.show.textContent = ' '
+        })
+    }
 }
 
 calculator.click()
 calculator.evaluation()
 calculator.clear()
-
-
 
 //test
   
